@@ -98,7 +98,7 @@ const Header = () => {
           {/* 로그인 상태에 따른 프로필/아바타 처리 */}
           {user ? (
             <AvatarCircle title={user.name}>
-              {user.name ? user.name.slice(0, 2) : '회원'}
+              {user.name ? user.name.slice(0, 3) : '회원'}
             </AvatarCircle>
           ) : (
             <IconButton>
@@ -181,7 +181,7 @@ const Header = () => {
 
                     <Divider />
 
-                    <HostCardLink to="/host" onClick={() => setIsMenuOpen(false)}>
+                    <HostCardLink to="/login" onClick={() => setIsMenuOpen(false)}>
                       <div className="text-group">
                         <strong>호스팅 하기</strong>
                         <p>간단하게 호스팅을 시작하고 부수입을 올릴 수 있습니다.</p>
